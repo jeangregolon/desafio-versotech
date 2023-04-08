@@ -5,6 +5,7 @@ import axios from 'axios';
 const initialState = {
   loading: false,
   pokemons: [],
+  pokemonDetails: null,
   error: null,
 };
 
@@ -22,6 +23,23 @@ const reducer = (state = initialState, action) => {
         pokemons: action.payload,
       };
     case 'GET_POKEMONS_FAILURE':
+      return {
+        ...state,
+        loading: false,
+        error: action.payload,
+      };
+    case 'GET_POKEMON_DETAILS_REQUEST':
+      return {
+        ...state,
+        loading: true,
+      };
+    case 'GET_POKEMON_DETAILS_SUCCESS':
+      return {
+        ...state,
+        loading: false,
+        pokemonDetails: action.payload,
+      };
+    case 'GET_POKEMON_DETAILS_FAILURE':
       return {
         ...state,
         loading: false,
@@ -52,6 +70,26 @@ const getPokemonsFailure = (error) => {
   };
 };
 
+const getPokemonDetailsRequest = () => {
+  return {
+    type: 'GET_POKEMON_DETAILS_REQUEST',
+  };
+};
+
+const getPokemonDetailsSuccess = (pokemonDetails) => {
+  return {
+    type: 'GET_POKEMON_DETAILS_SUCCESS',
+    payload: pokemonDetails,
+  };
+};
+
+const getPokemonDetailsFailure = (error) => {
+  return {
+    type: 'GET_POKEMON_DETAILS_FAILURE',
+    payload: error,
+  };
+};
+
 const getPokemons = () => {
   return (dispatch) => {
     dispatch(getPokemonsRequest());
@@ -67,6 +105,21 @@ const getPokemons = () => {
   };
 };
 
+const getPokemonDetails = (pokemonNameOrId) => {
+  return (dispatch) => {
+    dispatch(getPokemonDetailsRequest());
+    axios
+      .get(`https://pokeapi.co/api/v2/pokemon/${pokemonNameOrId}`)
+      .then((response) => {
+        const pokemonDetails = response.data;
+        dispatch(getPokemonDetailsSuccess(pokemonDetails));
+      })
+      .catch((error) => {
+        dispatch(getPokemonDetailsFailure(error.message));
+      });
+  };
+};
+
 const store = createStore(reducer, applyMiddleware(thunk));
 
-export { getPokemons, store };
+export { getPokemons, getPokemonDetails, store };

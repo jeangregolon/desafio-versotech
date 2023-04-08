@@ -7,6 +7,7 @@
   background-color: #ffffff;
   text-align: center;
   margin: 10px;
+  text-transform: capitalize;
 }
 
 .card:hover {

@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import './style.css';
 import Card from '../card';
 import { getPokemons } from '../../store/storeConfig';
+import Error from '../error';
+import Loading from '../../loading';
 
 const PokemonList = () => {
   const [itemsPerPage, setItemsPerPage] = useState(12);
@@ -137,8 +139,8 @@ const PokemonList = () => {
       <div className="list">
         <div className="card-container">
           {notFound && <h2>Nenhum resultado encontrado.</h2>}
-          {loading && <h2>Carregando...</h2>}
-          {error && <h2>Erro.</h2>}
+          {loading && <Loading />}
+          {error && <Error />}
           {!notFound &&
             !loading &&
             !error &&

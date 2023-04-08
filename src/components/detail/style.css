@@ -1,0 +1,148 @@
+/* Styles for the PokemonDetail component */
+.pokemon-detail {
+  padding: 0 30px;
+}
+
+.pokemon-detail h1 {
+  text-transform: capitalize;
+}
+
+.pokemon-detail img {
+  /* display: block; */
+  margin: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+.pokemon-detail h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.pokemon-detail ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px;
+}
+
+.pokemon-detail li {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.pokemon-detail li.normal {
+  color: #a8a878;
+}
+
+.pokemon-detail li.fire {
+  color: #f08030;
+}
+
+.pokemon-detail li.water {
+  color: #6890f0;
+}
+
+.pokemon-detail li.electric {
+  color: #f8d030;
+}
+
+.pokemon-detail li.grass {
+  color: #78c850;
+}
+
+.pokemon-detail li.ice {
+  color: #98d8d8;
+}
+
+.pokemon-detail li.fighting {
+  color: #c03028;
+}
+
+.pokemon-detail li.poison {
+  color: #a040a0;
+}
+
+.pokemon-detail li.ground {
+  color: #e0c068;
+}
+
+.pokemon-detail li.flying {
+  color: #a890f0;
+}
+
+.pokemon-detail li.psychic {
+  color: #f85888;
+}
+
+.pokemon-detail li.bug {
+  color: #a8b820;
+}
+
+.pokemon-detail li.rock {
+  color: #b8a038;
+}
+
+.pokemon-detail li.ghost {
+  color: #705898;
+}
+
+.pokemon-detail li.dragon {
+  color: #7038f8;
+}
+
+.pokemon-detail li.dark {
+  color: #705848;
+}
+
+.pokemon-detail li.steel {
+  color: #b8b8d0;
+}
+
+.pokemon-detail li.fairy {
+  color: #ee99ac;
+}
+
+.pokemon-detail table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+.pokemon-detail th {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-bottom: 2px solid #444;
+}
+
+.pokemon-detail td {
+  padding: 5px 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.wrapper {
+  display: flex;
+}
+
+td {
+  text-transform: capitalize;
+}
+
+.left-column {
+  width: 33%;
+}
+
+.right-column {
+  width: 67%;
+}
+
+@media (max-width: 719px) {
+  .wrapper {
+    flex-direction: column;
+  }
+}

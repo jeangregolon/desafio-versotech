@@ -12,7 +12,7 @@ const Card = ({ name }) => {
         navigate(`/pokemon/${name}`);
       }}
     >
-      <h2 class="card-title">{name.charAt(0).toUpperCase() + name.slice(1)}</h2>
+      <h2 class="card-title">{name}</h2>
     </div>
   );
 };
