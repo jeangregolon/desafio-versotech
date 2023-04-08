@@ -48,12 +48,14 @@ const PokemonDetail = () => {
 
   return (
     <div className="pokemon-detail">
-      <h1 className="pokemon-name">{pokemon.name}</h1>
-      <img
-        className="pokemon-image"
-        src={pokemon.sprites.front_default}
-        alt={pokemon.name}
-      />
+      <div className="top">
+        <h1 className="pokemon-name">{pokemon.name}</h1>
+        <img
+          className="pokemon-image"
+          src={pokemon.sprites.front_default}
+          alt={pokemon.name}
+        />
+      </div>
       <div className="wrapper">
         <div className="left-column">
           <h2 className="pokemon-types-heading">Tipos:</h2>
