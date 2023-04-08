@@ -108,33 +108,35 @@ const PokemonList = () => {
   return (
     <div className="container">
       <div className="search-bar">
-        <span>
-          <input
-            className="input-search"
-            type="text"
-            placeholder="Pesquisar por nome..."
-            onChange={handleSearch}
-          />
-        </span>
-        <span className="span-select">
-          <p className="select-label">Itens por página:</p>
-          <div className="select">
-            <select
-              className="select-field"
-              onChange={(e) => {
-                setItemsPerPage(e.target.value);
-                setCurrentPage(1);
-              }}
-              value={itemsPerPage}
-            >
-              <option selected disabled></option>
-              <option value="12">12</option>
-              <option value="24">24</option>
-              <option value="36">36</option>
-              <option value="48">48</option>
-            </select>
-          </div>
-        </span>
+        <div className="search-container">
+          <span>
+            <input
+              className="input-search"
+              type="text"
+              placeholder="Pesquisar por nome..."
+              onChange={handleSearch}
+            />
+          </span>
+          <span className="span-select">
+            <p className="select-label">Itens por página:</p>
+            <div className="select">
+              <select
+                className="select-field"
+                onChange={(e) => {
+                  setItemsPerPage(e.target.value);
+                  setCurrentPage(1);
+                }}
+                value={itemsPerPage}
+              >
+                <option selected disabled></option>
+                <option value="12">12</option>
+                <option value="24">24</option>
+                <option value="36">36</option>
+                <option value="48">48</option>
+              </select>
+            </div>
+          </span>
+        </div>
       </div>
       <div className="list">
         <div className="card-container">
