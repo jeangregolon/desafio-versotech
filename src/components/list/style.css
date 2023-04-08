@@ -1,0 +1,137 @@
+.container {
+  background-color: #5db9ff;
+  height: 100%;
+}
+
+.title {
+  color: #ffffff;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.search-bar {
+  margin-top: 2px;
+  padding: 2px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.span-select {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.select-label {
+  margin-right: 5px;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0;
+  background-image: none;
+  background: transparent;
+  width: 100%;
+}
+
+.select {
+  position: relative;
+  display: flex;
+  width: 50px;
+  height: 30px;
+  line-height: 30px;
+  background: rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+  border-radius: 0.25em;
+  border: 1px solid #e0e0e0;
+  padding: 0 5px;
+}
+
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #000;
+  cursor: pointer;
+  pointer-events: none;
+  transition: 0.25s all ease;
+}
+
+.input-search {
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+  font-size: 17px;
+}
+
+.button-search {
+  float: right;
+  padding: 8px;
+  border: none;
+  border-radius: 0 3px 3px 0;
+  background: #ddd;
+  cursor: pointer;
+}
+
+.button-search:hover {
+  background: #ccc;
+}
+
+.list {
+  padding: 12px 16px;
+}
+
+ul.pagination {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+ul.pagination li {
+  display: inline;
+}
+
+ul.pagination li button {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border: 1px solid #ddd;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+ul.pagination li button.active {
+  background-color: #ff1f1f;
+  color: white;
+  border: 1px solid #ff1f1f;
+}
+
+ul.pagination li button.disabled {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  cursor: not-allowed;
+}
+
+ul.pagination li button:hover:not(.active, .disabled) {
+  background-color: #ddd;
+}
+
+div.center {
+  text-align: center;
+  margin-top: auto;
+}
