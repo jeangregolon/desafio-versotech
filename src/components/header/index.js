@@ -7,22 +7,24 @@ const Header = () => {
 
   return (
     <header className="pokemon-header">
-      <img
-        src="/pokeball.png"
-        className="pokemon-logo"
-        alt="logo"
-        onClick={() => {
-          navigate('/');
-        }}
-      />
-      <h1
-        className="pokemon-title"
-        onClick={() => {
-          navigate('/');
-        }}
-      >
-        Pokédex
-      </h1>
+      <div>
+        <img
+          src="/pokeball.png"
+          className="pokemon-logo"
+          alt="logo"
+          onClick={() => {
+            navigate('/');
+          }}
+        />
+        <h1
+          className="pokemon-title"
+          onClick={() => {
+            navigate('/');
+          }}
+        >
+          Pokédex
+        </h1>
+      </div>
     </header>
   );
 };
