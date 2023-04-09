@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import { getPokemonDetails } from '../../store/storeConfig';
 import './style.css';
 import Error from '../error';
-import Loading from '../../loading';
+import Loading from '../loading';
 
 const renderStats = (stats) => {
   return (
