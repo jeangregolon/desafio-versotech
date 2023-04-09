@@ -4,7 +4,8 @@ import './style.css';
 import Card from '../card';
 import { getPokemons } from '../../store/storeConfig';
 import Error from '../error';
-import Loading from '../../loading';
+import Loading from '../loading';
+import NotFound from '../notFound';
 
 const PokemonList = () => {
   const [itemsPerPage, setItemsPerPage] = useState(12);
@@ -140,7 +141,7 @@ const PokemonList = () => {
       </div>
       <div className="list">
         <div className="card-container">
-          {notFound && <h2>Nenhum resultado encontrado.</h2>}
+          {notFound && <NotFound />}
           {loading && <Loading />}
           {error && <Error />}
           {!notFound &&
